@@ -1,6 +1,9 @@
 # AnsibleDocker
 Despliegue de playbooks de Ansible en contenedores Docker
 
+## Parte Teórica
+Una breve descripción de la parte teórica se adjunta en el siguiente link: [Mis primeros pasos con Ansible y Docker](https://docs.google.com/presentation/d/1uPaufcRsuD2Z0tQCOWaj1HXsgM-_yjY-Ns1mobmIFkE/edit?usp=sharing)
+
 ## Requisitos previos
 En el computador tener instalados Docker y Ansible
 Para ver si se tiene instalado estos paquetes introducir los siguientes comandos:
