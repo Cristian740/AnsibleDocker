@@ -1,0 +1,26 @@
+- name: Install packages 
+  hosts: ubuntu-sshserver1
+  become: yes
+  vars:
+    username: cris
+    groupname: grojas
+  tasks:
+  - name: install git
+    apt:
+      name: git
+      state: latest
+  - name: install tree
+    apt:
+      update_cache: yes
+      name: tree
+      state: present
+  - name: Add group
+    group:
+      name: "{{ groupname }}"
+      state: present
+  - name: Add user
+    user:
+      name: "{{ username }}"
+      group: "{{ groupname }}"
+      state: present
+      shell: /bin/bash
