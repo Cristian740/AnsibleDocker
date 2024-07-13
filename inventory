@@ -1,0 +1,17 @@
+# Example inventory that makes an alias for localhost that uses Python3
+localhost-py3 ansible_host=localhost ansible_connection=local ansible_python_interpreter=/usr/bin/python3
+
+# Example of setting a group of hosts to use Python3
+[py3_hosts]
+ubuntu-sshserver1
+
+[py3_hosts:vars]
+ansible_python_interpreter=/usr/bin/python3
+
+[all:vars]
+ansible_connection=ssh
+ansible_user=root
+ansible_ssh_pass=root
+
+[dockers]
+ubuntu-sshserver1 ansible_port=50022 ansible_host=172.17.0.1
