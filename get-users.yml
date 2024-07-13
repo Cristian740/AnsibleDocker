@@ -1,0 +1,10 @@
+- name: USERS INFO
+  hosts: ubuntu-sshserver1
+  tasks:
+  - name: Get all user info
+    getent:
+      database: passwd
+
+  - name: Show all uer info
+    debug:
+      var: getent_passwd
